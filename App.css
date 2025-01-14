@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-body, html {
+body,
+html {
   font-family: "Open Sans", sans-serif;
 
   & * {
@@ -36,7 +37,7 @@ input {
 .submit {
   padding: 5px 10px;
   color: white;
-  background:  green;
+  background: green;
 
   border: none;
   transition: all 300ms ease;
@@ -50,8 +51,8 @@ input {
   padding: 5px;
   width: 100%;
   color: white;
-  background:  blueviolet;
-  
+  background: blueviolet;
+
   border: none;
   transition: all 300ms ease;
 }
@@ -81,7 +82,6 @@ button:active {
   justify-content: center;
   align-items: center;
 }
-
 
 .in {
   opacity: 0.75;
