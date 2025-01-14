@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+
+  & * {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+#container {
+  border: 1px solid;
+  border-radius: 7px;
+
+  background: #eaeaea;
+  box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.15);
+
+  position: fixed;
+  width: max-content;
+  height: fit-content;
+  padding: 16px;
+
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+input {
+  border: 1.5px solid;
+  padding: 5px;
+  width: 300px;
+}
+.submit {
+  padding: 5px 10px;
+  color: white;
+  background:  green;
+
+  border: none;
+  transition: all 300ms ease;
+}
+
+.jawaban {
+  margin: 12px 0;
+}
+
+.next {
+  padding: 5px;
+  width: 100%;
+  color: white;
+  background:  blueviolet;
+  
+  border: none;
+  transition: all 300ms ease;
+}
+
+button:active {
+  background: #000;
+}
+button:hover {
+  background: blue;
+  transition: all 300ms ease;
+}
