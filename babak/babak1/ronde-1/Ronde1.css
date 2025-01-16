@@ -1,41 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.answer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-body,
-html {
-  font-family: "Open Sans", sans-serif;
-
-  & * {
-    padding: 0;
-    margin: 0;
-  }
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#container {
+#answer-field {
   border: 1px solid;
   border-radius: 7px;
 
   background: #eaeaea;
   box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.15);
-
-  position: fixed;
-  width: max-content;
-  height: fit-content;
   padding: 25px;
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  width: 1000px;
-  height: 400px;
+
+  width: fit-content;
+  height: fit-content;
+}
+.title {
+  display: flex;
 }
 
 input {
   border: 1.5px solid;
   padding: 5px;
-  width: 700px;
   height: 100px;
 }
 .submit {
@@ -51,6 +46,10 @@ input {
 
 .jawaban {
   margin: 12px 0;
+  display: flex;
+  width: 700px;
+
+  flex-direction: column;
 }
 
 .buttons {
@@ -88,6 +87,8 @@ button:active {
   position: absolute;
   width: 100%;
   height: 100vh;
+
+  top: 0;
 }
 
 .show-result {
