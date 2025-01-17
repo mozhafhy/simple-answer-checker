@@ -85,6 +85,8 @@ input.submit {
   color: var(--white);
   background: var(--primary);
   border: none;
+
+  cursor: pointer;
 }
 input.submit:active {
   background: var(--black);
