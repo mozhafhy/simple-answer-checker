@@ -26,6 +26,7 @@
 .alert {
   height: 12px;
   font-weight: bold;
+  color: red;
 }
 
 .jawab {

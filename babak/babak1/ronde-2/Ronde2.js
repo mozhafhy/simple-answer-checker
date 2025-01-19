@@ -4,6 +4,7 @@ const next = document.querySelector(".next");
 const back = document.querySelector(".back");
 const counter = document.querySelector(".counter");
 const input = document.querySelector(".jawab");
+const form = document.querySelector(".jawaban");
 const totalSoal = document.querySelector(".count");
 const submit = document.querySelector(".submit");
 const result = document.querySelector(".result");
@@ -13,6 +14,7 @@ totalSoal.textContent = answers.length;
 
 let count = 1;
 const ANIMATION_DURATION = 1250;
+form.addEventListener("submit", (e) => e.preventDefault());
 submit.addEventListener("click", () => {
   const userInput = input.value;
   result.textContent = "";
