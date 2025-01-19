@@ -10,20 +10,28 @@
   </head>
   <body>
     <div id="main-container">
+      <div class="title-container">
+        <div class="title">
+          <img src="../../../assets/logo.svg" />
+          <h1 class="soc">Smada of Champion</h1>
+        </div>
+        <h1 class="ronde">Ronde 1</h1>
+      </div>
       <div id="container">
         <h1>
           Soal <span class="counter">1</span> dari
           <span class="count"></span>
         </h1>
-        <div class="jawaban">
+        <form class="jawaban">
           <input class="jawab" type="text" placeholder="Masukkan jawaban" />
-          <button class="submit">Submit</button>
-        </div>
+          <input type="reset" value="Submit" class="submit" />
+        </form>
         <div class="buttons">
           <button class="back">Back</button>
           <button class="next">Next</button>
         </div>
       </div>
+      <p class="alert"></p>
       <div class="result"></div>
     </div>
     <script src="./Ronde2.js" type="module"></script>
