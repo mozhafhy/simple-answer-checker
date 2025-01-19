@@ -33,11 +33,18 @@ h1 {
 .tim {
   position: absolute;
   top: 6.25rem;
-  
+  display: flex;
+
   .nomor {
     border: none;
     width: 36px;
     font-size: 16px;
+    font-weight: bold;
+    margin-left: 6px;
+  }
+
+  .alert {
+    color: red;
     font-weight: bold;
   }
 }
@@ -114,13 +121,13 @@ input.submit:active {
 }
 .tim-progress {
   /* border: 1px solid; */
-  
+
   display: flex;
   flex-direction: row;
   gap: 8px;
   justify-content: center;
   align-items: center;
-  
+
   span {
     /* border: 1px solid; */
 
@@ -139,4 +146,15 @@ input.submit:active {
 
   background: lightgrey;
   transition: all ease 500ms;
+}
+
+.benar {
+  background: green;
+}
+.salah {
+  background: red;
+}
+.disabled {
+  filter: opacity(0.5) brightness(0.75);
+  pointer-events: none;
 }
