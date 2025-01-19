@@ -5,7 +5,7 @@
 
   display: flex;
   flex-direction: column;
-  padding-top: 6rem;
+  padding-top: 4.25rem;
   align-items: center;
 }
 
@@ -127,8 +127,11 @@ button:active {
   display: flex;
   align-items: center;
 
-  margin-left: -75px;
+  margin-left: -100px;
+}
+.soc {
+  font-size: 60px;
 }
 img {
-  height: 75px;
+  height: 100px;
 }
