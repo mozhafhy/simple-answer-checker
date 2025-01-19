@@ -24,7 +24,7 @@ inputs.forEach((input, key) => {
       return;
     }
     if (Number(tim.value) < 1 || Number(tim.value) > progresses.length) {
-      showAlert("Nomor tim tidak valid!");
+      showAlert("Masukkan nomor tim antara 1 dan 16!");
       return;
     }
 
