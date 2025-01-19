@@ -3,7 +3,7 @@
 
   bottom: 50%;
   right: 50%;
-  transform: translate(50%, 50%);;
+  transform: translate(50%, 50%);
 }
 
 .title-container {
@@ -13,7 +13,6 @@
 
   margin-bottom: 15px;
 }
-
 .title {
   display: flex;
   flex-direction: row;
@@ -22,24 +21,36 @@
   margin-left: -100px;
 }
 .soc {
-  font-size: 60px
+  font-size: 48px;
 }
 img {
-  width: 100px;
+  width: 75px;
 }
 h1 {
   margin: 0;
 }
+
+.tim {
+  position: absolute;
+  top: 6.25rem;
+  
+  .nomor {
+    border: none;
+    width: 36px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+
 .card-container {
   display: flex;
   gap: 120px;
 }
-
 .card {
   border: 1px solid;
 
-  width: 320px;
-  height: 425px;
+  width: 300px;
+  height: 400px;
   border-radius: 15px;
   box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
   background: var(--light);
@@ -52,35 +63,37 @@ h1 {
   justify-content: space-between;
 }
 .soal {
-  width: 270px;
-  height: 270px;
+  width: 250px;
+  height: 250px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 240px;
-  line-height: 240px;
+  font-size: 225px;
+  line-height: 225px;
   font-weight: bold;
   color: var(--white);
   background: var(--black);
   transition: all ease 500ms;
 }
 form {
-  width: 270px;
+  width: 225px;
 
   display: flex;
   flex-direction: column;
   row-gap: 15px;
 }
 input.jawab {
-  font-size: 20px;
-  height: 45px;
+  font-size: 16px;
+  height: 30px;
   padding-left: 12px;
+
+  border: 2px solid var(--black);
 }
 input.submit {
-  font-size: 30px;
-  height: 60px;
+  font-size: 24px;
+  height: 54px;
 
   color: var(--white);
   background: var(--primary);
@@ -90,4 +103,40 @@ input.submit {
 }
 input.submit:active {
   background: var(--black);
+}
+
+.scoreboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.tim-progress {
+  /* border: 1px solid; */
+  
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  
+  span {
+    /* border: 1px solid; */
+
+    width: 15px;
+    text-align: right;
+  }
+}
+.progress {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+.box {
+  width: 12px;
+  height: 12px;
+
+  background: lightgrey;
+  transition: all ease 500ms;
 }
