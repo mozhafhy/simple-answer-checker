@@ -28,3 +28,18 @@ button:hover {
 
   transition: all ease 100ms;
 }
+.submit {
+  color: var(--white);
+  background: var(--primary);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: all 250ms ease;
+}
+.submit:hover {
+  background: var(--secondary);
+}
+.submit:active {
+  background: var(--black);
+}

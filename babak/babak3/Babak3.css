@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+}
+
+#main-container {
+  border: 1px solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+img {
+  width: 100px;
+}
+.soc {
+  font-size: 48px;
+}
+
+.kode-soal {
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 36px;
+}
+
+.alert {
+  color: red;
+  font-weight: bold;
+}
+
+.answer-box {
+  border: 1px solid;
+  border-radius: 15px;
+  background: var(--light);
+  box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  margin: 16px 0;
+  padding: 16px 24px;
+
+  .answer-field {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  input {
+    font-size: 24px;
+    padding: 12px;
+  }
+  .jawab {
+    border: 2px solid;
+  }
+}
