@@ -27,8 +27,7 @@ submit.addEventListener("click", () => {
   );
 
   result.appendChild(showResult);
-
-  setTimeout(() => showResult.classList.add("in"), 0); // ? The .in class appears instantly
+  setTimeout(() => showResult.classList.add("in"), 0);
   setTimeout(
     () => showResult.classList.replace("in", "out"),
     ANIMATION_DURATION
