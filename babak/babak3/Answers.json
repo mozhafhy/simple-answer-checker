@@ -1,152 +1,102 @@
 [
   {
     "id": "00",
-    "kode": "01E",
-    "jawaban": ""
+    "kode": "SOAL01",
+    "jawaban": "TEST"
   },
   {
     "id": "01",
-    "kode": "02E",
+    "kode": "SOAL02",
     "jawaban": ""
   },
   {
     "id": "02",
-    "kode": "03E",
+    "kode": "SOAL03",
     "jawaban": ""
   },
   {
     "id": "03",
-    "kode": "04E",
+    "kode": "SOAL04",
     "jawaban": ""
   },
   {
     "id": "04",
-    "kode": "05E",
+    "kode": "SOAL05",
     "jawaban": ""
   },
   {
     "id": "05",
-    "kode": "06E",
+    "kode": "SOAL06",
     "jawaban": ""
   },
   {
     "id": "06",
-    "kode": "07E",
+    "kode": "SOAL07",
     "jawaban": ""
   },
   {
     "id": "07",
-    "kode": "08E",
+    "kode": "SOAL08",
     "jawaban": ""
   },
   {
     "id": "08",
-    "kode": "09E",
+    "kode": "SOAL09",
     "jawaban": ""
   },
   {
     "id": "09",
-    "kode": "10E",
+    "kode": "SOAL10",
     "jawaban": ""
   },
   {
     "id": "10",
-    "kode": "01M",
+    "kode": "SOAL11",
     "jawaban": ""
   },
   {
     "id": "11",
-    "kode": "02M",
+    "kode": "SOAL12",
     "jawaban": ""
   },
   {
     "id": "12",
-    "kode": "03M",
+    "kode": "SOAL13",
     "jawaban": ""
   },
   {
     "id": "13",
-    "kode": "04M",
+    "kode": "SOAL14",
     "jawaban": ""
   },
   {
     "id": "14",
-    "kode": "05M",
+    "kode": "SOAL15",
     "jawaban": ""
   },
   {
     "id": "15",
-    "kode": "06M",
+    "kode": "SOAL16",
     "jawaban": ""
   },
   {
     "id": "16",
-    "kode": "07M",
+    "kode": "SOAL17",
     "jawaban": ""
   },
   {
     "id": "17",
-    "kode": "08M",
+    "kode": "SOAL18",
     "jawaban": ""
   },
   {
     "id": "18",
-    "kode": "09M",
+    "kode": "SOAL19",
     "jawaban": ""
   },
   {
     "id": "19",
-    "kode": "10M",
-    "jawaban": ""
-  },
-  {
-    "id": "20",
-    "kode": "01H",
-    "jawaban": ""
-  },
-  {
-    "id": "21",
-    "kode": "02H",
-    "jawaban": ""
-  },
-  {
-    "id": "22",
-    "kode": "03H",
-    "jawaban": ""
-  },
-  {
-    "id": "23",
-    "kode": "04H",
-    "jawaban": ""
-  },
-  {
-    "id": "24",
-    "kode": "05H",
-    "jawaban": ""
-  },
-  {
-    "id": "25",
-    "kode": "06H",
-    "jawaban": ""
-  },
-  {
-    "id": "26",
-    "kode": "07H",
-    "jawaban": ""
-  },
-  {
-    "id": "27",
-    "kode": "08H",
-    "jawaban": ""
-  },
-  {
-    "id": "28",
-    "kode": "09H",
-    "jawaban": ""
-  },
-  {
-    "id": "29",
-    "kode": "10H",
+    "kode": "SOAL20",
     "jawaban": ""
   }
 ]

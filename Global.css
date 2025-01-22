@@ -7,6 +7,9 @@
   --primary: rgb(102, 155, 187);
   --secondary: rgb(156, 21, 39);
   --accent: rgb(87, 25, 46);
+  --shadow: 3px 4px 10px 2px rgba(0, 47, 73, 0.15);
+  --correct: rgb(46, 125, 50);
+  --alert: rgb(198, 40, 40);
 }
 body,
 html {
@@ -16,9 +19,22 @@ html {
   padding: 0;
 }
 
+#main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  width: fit-content;
+  height: fit-content;
+  
+  transform: translate(50%, 50%);
+}
+
 button {
   color: var(--black);
   border: 2px var(--black) solid;
+  cursor: pointer;
 
   transition: all ease 100ms;
 }
@@ -42,4 +58,45 @@ button:hover {
 }
 .submit:active {
   background: var(--black);
+}
+
+.alert {
+  height: 12px;
+  color: var(--alert);
+  font-weight: bold;
+}
+
+.result {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+.show-result {
+  width: 100%;
+  height: 100vh;
+
+  opacity: 0;
+
+  color: white;
+  font-weight: bolder;
+  font-size: 96px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms ease;
+}
+.show-result.in {
+  opacity: 0.75;
+}
+.show-result.out {
+  opacity: 0;
+}
+.show-result.benar {
+  background: var(--correct);
+}
+.show-result.salah {
+  background: var(--alert);
 }

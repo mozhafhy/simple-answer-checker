@@ -3,19 +3,8 @@
 }
 
 #main-container {
-  border: 1px solid;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  position: fixed;
-  width: fit-content;
-  height: fit-content;
-
   bottom: 50%;
   right: 50%;
-  transform: translate(50%, 50%);
 }
 
 .title {
@@ -33,19 +22,17 @@ img {
   border: none;
   font-size: 16px;
   font-weight: bold;
-  width: 36px;
+  width: 72px;
 }
-
-.alert {
-  color: red;
-  font-weight: bold;
+.kode-soal:focus {
+  outline: none;
 }
 
 .answer-box {
   border: 1px solid;
   border-radius: 15px;
   background: var(--light);
-  box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow);
 
   display: flex;
   flex-direction: column;
@@ -68,39 +55,4 @@ img {
   .jawab {
     border: 2px solid;
   }
-}
-
-.result {
-  width: 100%;
-  height: 100vh;
-
-  position: absolute;
-  pointer-events: none;
-}
-.show-result {
-  width: 100%;
-  height: 100vh;
-  
-  font-size: 120px;
-  font-weight: bold;
-  color: var(--light);
-  opacity: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition: all ease 500ms;
-}
-.show-result.in {
-  opacity: 0.75;
-}
-.show-result.out {
-  opacity: 0;
-}
-.show-result.benar {
-  background: green;
-}
-.show-result.salah {
-  background: red;
 }

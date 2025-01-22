@@ -83,35 +83,3 @@ input {
 button:active {
   background: #000 !important;
 }
-
-.result {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-
-  top: 0;
-}
-
-.show-result {
-  width: 100%;
-  height: 100%;
-
-  opacity: 0;
-
-  color: white;
-  font-weight: bolder;
-  font-size: 96px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.in {
-  opacity: 0.75;
-  transition: all 250ms ease;
-}
-.out {
-  opacity: 0;
-  transition: all 750ms ease;
-}

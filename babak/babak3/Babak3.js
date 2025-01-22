@@ -16,42 +16,43 @@ fetch("./Answers.json")
     form.addEventListener("submit", (e) => e.preventDefault());
     submit.addEventListener("click", () => {
       const kodeSoal = kode.value.trim();
+      const answerData = getAnswer(kodeSoal);
       result.textContent = "";
-      if (kodeSoal === "") {
+
+      if (!kodeSoal) {
         showAlert("Masukkan kode soal!");
         return;
       }
-
-      const answer = getAnswer(kodeSoal);
-      const userInput = input.value;
-      const isCorrectAnswer = userInput === answer;
-
-      const showResult = document.createElement("div");
-      showResult.className = "show-result";
-      showResult.textContent = isCorrectAnswer ? "BENAR" : "SALAH";
-      showResult.classList.add(isCorrectAnswer ? "benar" : "salah");
-
-      result.appendChild(showResult);
-      setTimeout(() => showResult.classList.add("in"), 0);
-      setTimeout(
-        () => showResult.classList.replace("in", "out"),
-        RESULT_DURATION
-      );
-      setTimeout(() => showResult.remove(), 2 * RESULT_DURATION);
-
-      console.log(answer);
-    });
-
-    function getAnswer(input) {
-      let answer = "No";
-      for (let key = 0; key < answerKeys.length; key++) {
-        if (answerKeys[key].kode === input) {
-          answer = answerKeys[key].jawaban;
-          break;
-        }
+      if (!answerData) {
+        showAlert("Soal tidak ditemukan!");
+        return;
       }
 
-      return answer;
+      const answer = answerData.toLowerCase();
+      const userInput = input.value.toLowerCase();
+
+      showResult(userInput === answer);
+    });
+
+    function showResult(isCorrectAnswer) {
+      const resultElement = document.createElement("div");
+      resultElement.className = `show-result ${
+        isCorrectAnswer ? "benar" : "salah"
+      }`;
+      resultElement.textContent = isCorrectAnswer ? "BENAR" : "SALAH";
+
+      result.appendChild(resultElement);
+      setTimeout(() => resultElement.classList.add("in"), 0);
+      setTimeout(
+        () => resultElement.classList.replace("in", "out"),
+        RESULT_DURATION
+      );
+      setTimeout(() => resultElement.remove(), 2 * RESULT_DURATION);
+    }
+
+    function getAnswer(kodeSoal) {
+      const found = answerKeys.find((soal) => soal.kode === kodeSoal);
+      return found ? found.jawaban : null;
     }
 
     let messageTimeOut;

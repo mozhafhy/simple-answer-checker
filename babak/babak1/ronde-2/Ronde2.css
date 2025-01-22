@@ -1,12 +1,6 @@
 #main-container {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  padding-top: 4.25rem;
-  align-items: center;
+  bottom: 55%;
+  right: 50%;
 }
 
 #container {
@@ -21,12 +15,6 @@
   padding: 16px;
 
   text-align: center;
-}
-
-.alert {
-  height: 12px;
-  font-weight: bold;
-  color: red;
 }
 
 .jawab {
@@ -66,42 +54,6 @@
 
   transition: all 300ms ease;
 
-}
-
-.result {
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-}
-
-.show-result {
-  width: 100%;
-  height: 100vh;
-
-  opacity: 0;
-
-  color: white;
-  font-weight: bolder;
-  font-size: 96px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 500ms ease;
-}
-.show-result.in {
-  opacity: 0.75;
-}
-.show-result.out {
-  opacity: 0;
-}
-.show-result.benar {
-  background: green;
-}
-.show-result.salah {
-  background: red;
 }
 
 .title-container {
