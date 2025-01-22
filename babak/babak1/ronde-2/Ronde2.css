@@ -17,43 +17,92 @@
   text-align: center;
 }
 
-.jawab {
-  border: 1.5px solid;
-  padding: 5px;
-  width: 300px;
-}
-.submit {
-  padding: 5px 10px;
-}
-
-.jawaban {
-  margin: 12px 0;
-}
-
-.buttons {
+.card-container {
   display: flex;
-  gap: 10px;
+  gap: 60px;
+}
+.card {
+  border: 1px solid;
+
+  width: 240px;
+  height: fit-content;
+  border-radius: 12px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+  background: var(--light);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  gap: 24px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.posisi {
+  font-size: 24px;
+  font-weight: bold;
+}
+.soal {
+  width: 200px;
+  height: fit-content;
+  padding: 16px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  color: var(--white);
+  background: var(--black);
+  transition: all ease 500ms;
+}
+form {
+  width: 200px;
+  
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+form.disabled {
+  opacity: 0.75;
+  filter: brightness(0.5);
+  pointer-events: none;
+}
+.jawaban {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: inherit;
+}
+input.baris, input.kolom {
+  width: 87.5px;
+  font-size: 16px;
+  height: 24px;
+
+  border: 2px solid var(--black);
+  transition: all ease 500ms;
+}
+input.benar {
+  background: rgba(46, 125, 50, 0.5);
+}
+input.salah {
+  background: rgba(198, 40, 40, 0.5);
 }
 
-.buttons {
-  & .next, & .back {
-    padding: 5px;
-    width: 50%;
-    color: white;
+input.submit {
+  font-size: 24px;
+  height: 48px;
 
-    border: none;
-  }
+  color: var(--white);
+  background: var(--primary);
+  border: none;
 
-  & .next {
-    background: blueviolet;
-  }
-
-  & .back {
-    background: teal;
-  }
-
-  transition: all 300ms ease;
-
+  cursor: pointer;
 }
 
 .title-container {
@@ -65,12 +114,12 @@
   * {
     margin: 0;
   }
-}
-.title-container .title {
-  display: flex;
-  align-items: center;
+  .title {
+    display: flex;
+    align-items: center;
 
-  margin-left: -100px;
+    margin-left: -100px;
+  }
 }
 .soc {
   font-size: 60px;

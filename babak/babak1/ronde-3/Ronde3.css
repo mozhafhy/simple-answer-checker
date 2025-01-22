@@ -108,9 +108,6 @@ input.submit {
 
   cursor: pointer;
 }
-input.submit:active {
-  background: var(--black);
-}
 
 .scoreboard {
   display: grid;

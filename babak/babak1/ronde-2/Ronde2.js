@@ -1,69 +1,57 @@
-const answers = ["a", "b", "c", "d", "e"];
+const answerKeys = [
+  { nama: "nabila", posisi: { baris: 0, kolom: 0 } },
+  { nama: "zhafif", posisi: { baris: 1, kolom: 1 } },
+  { nama: "artanti", posisi: { baris: 2, kolom: 2 } },
+  { nama: "rakha", posisi: { baris: 3, kolom: 3 } },
+  { nama: "mirna", posisi: { baris: 4, kolom: 4 } },
+];
 
-const next = document.querySelector(".next");
-const back = document.querySelector(".back");
-const counter = document.querySelector(".counter");
-const input = document.querySelector(".jawab");
-const form = document.querySelector(".jawaban");
-const totalSoal = document.querySelector(".count");
-const submit = document.querySelector(".submit");
-const result = document.querySelector(".result");
-const message = document.querySelector(".alert");
+const inputs = document.querySelectorAll("form");
 
-totalSoal.textContent = answers.length;
+const RESULT_DURATION = 2000;
+const CLASS_BENAR = "benar";
+const CLASS_SALAH = "salah";
+const CLASS_DISABLED = "disabled";
 
-let count = 1;
-const ANIMATION_DURATION = 1250;
-form.addEventListener("submit", (e) => e.preventDefault());
-submit.addEventListener("click", () => {
-  const userInput = input.value;
-  result.textContent = "";
+inputs.forEach((input, idx) => {
+  input.addEventListener("submit", (e) => e.preventDefault());
 
-  const showResult = document.createElement("div");
-  showResult.className = "show-result";
-  showResult.textContent = userInput === answers[count - 1] ? "BENAR" : "SALAH";
-  showResult.classList.add(
-    userInput === answers[count - 1] ? "benar" : "salah"
-  );
+  const [jawaban, submit] = input.children;
+  const [barisInput, kolomInput] = jawaban.children;
 
-  result.appendChild(showResult);
-  setTimeout(() => showResult.classList.add("in"), 0);
-  setTimeout(
-    () => showResult.classList.replace("in", "out"),
-    ANIMATION_DURATION
-  );
-  setTimeout(() => showResult.remove(), ANIMATION_DURATION * 2);
+  submit.addEventListener("click", () => {
+    const { nama, posisi } = answerKeys[idx];
+    const baris = posisi.baris;
+    const kolom = posisi.kolom;
+    const soal = document.querySelector(`.${nama}`);
+
+    const isCorrect =
+      parseInt(barisInput.value, 10) === baris &&
+      parseInt(kolomInput.value, 10) === kolom;
+
+    showResult({
+      isCorrect,
+      elements: [soal, barisInput, kolomInput, input],
+    });
+  });
 });
 
-const MESSAGE_DURATION = 2000;
-let messageTimeOut;
-function showMessage(text, duration = MESSAGE_DURATION) {
-  if (messageTimeOut) {
-    clearTimeout(messageTimeOut);
-  }
+function showResult({ isCorrect, elements }) {
+  const [soal, barisInput, kolomInput, input] = elements;
+  const classSate = isCorrect ? CLASS_BENAR : CLASS_SALAH;
 
-  message.textContent = text;
-  messageTimeOut = setTimeout(() => {
-    message.textContent = "";
-    messageTimeOut = null;
-  }, duration);
+  requestAnimationFrame(() => {
+    [soal, barisInput, kolomInput].forEach((el) => {
+      el.classList.remove(CLASS_BENAR, CLASS_SALAH);
+      el.classList.add(classSate);
+    });
+    input.classList.add(CLASS_DISABLED);
+
+    setTimeout(() => {
+      [soal, barisInput, kolomInput].forEach((el) => {
+        el.classList.remove(classSate);
+      });
+      input.classList.remove(CLASS_DISABLED);
+    }, RESULT_DURATION);
+  });
 }
-
-next.addEventListener("click", () => {
-  if (count < answers.length) {
-    count++;
-    message.textContent = "";
-    counter.textContent = count;
-  } else {
-    showMessage("Anda berada di soal terakhir!");
-  }
-});
-back.addEventListener("click", () => {
-  if (count > 1) {
-    count--;
-    message.textContent = "";
-    counter.textContent = count;
-  } else {
-    showMessage("Anda berada di soal pertama!");
-  }
-});

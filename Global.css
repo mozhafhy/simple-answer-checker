@@ -94,9 +94,9 @@ button:hover {
 .show-result.out {
   opacity: 0;
 }
-.show-result.benar {
+.show-result.benar, .soal.benar {
   background: var(--correct);
 }
-.show-result.salah {
+.show-result.salah, .soal.salah {
   background: var(--alert);
 }
