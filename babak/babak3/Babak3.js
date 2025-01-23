@@ -28,24 +28,11 @@ fetch("./Answers.json")
         return;
       }
 
-      const answerKey = answerData
-        .toLowerCase()
-        .replace(/\W/g, "")
-        .split(" ");
-      const userInput = input.value
-        .toLowerCase()
-        .replace(/\W/g, "")
-        .split(" ");
+      const answerKey = answerData.toLowerCase().replace(/\W/g, "");
+      const userInput = input.value.toLowerCase().replace(/\W/g, "");
 
-      showResult(compareAnswer(userInput, answerKey));
+      showResult(userInput === answerKey);
     });
-
-    function compareAnswer(userInput, answerKey) {
-      return (
-        userInput.length === answerKey.length &&
-        userInput.every((el, idx) => el === answerKey[idx])
-      );
-    }
 
     function showResult(isCorrectAnswer) {
       const resultElement = document.createElement("div");
