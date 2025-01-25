@@ -111,7 +111,7 @@ input.submit {
 
 .scoreboard {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(9, 1fr);
 
   font-size: 0.75rem;
   line-height: 1rem;

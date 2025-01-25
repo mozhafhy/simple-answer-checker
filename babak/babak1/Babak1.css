@@ -1,0 +1,32 @@
+#main-container {
+  bottom: 60%;
+  right: 50%;
+}
+
+.title {
+  text-align: center;
+
+  * {
+    margin: 0;
+  }
+}
+
+.main-title {
+  display: flex;
+  align-items: center;
+}
+
+.ronde {
+  display: flex;
+  margin-top: 24px;
+
+  gap: 16px;
+}
+
+button {
+  width: 240px;
+  height: 80px;
+
+  font-size: 24px;
+  background: var(--light);
+}

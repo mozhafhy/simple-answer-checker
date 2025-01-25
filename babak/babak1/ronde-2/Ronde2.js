@@ -1,9 +1,9 @@
 const answerKeys = [
-  { nama: "nabila", posisi: { baris: 0, kolom: 0 } },
-  { nama: "zhafif", posisi: { baris: 1, kolom: 1 } },
-  { nama: "artanti", posisi: { baris: 2, kolom: 2 } },
-  { nama: "rakha", posisi: { baris: 3, kolom: 3 } },
-  { nama: "mirna", posisi: { baris: 4, kolom: 4 } },
+  { nama: "nabila", posisi: [3, 2] },
+  { nama: "zhafif", posisi: [1, 2] },
+  { nama: "artanti", posisi: [1, 1] },
+  { nama: "rakha", posisi: [2, 1] },
+  { nama: "mirna", posisi: [2, 3] },
 ];
 
 const inputs = document.querySelectorAll("form");
@@ -21,8 +21,7 @@ inputs.forEach((input, idx) => {
 
   submit.addEventListener("click", () => {
     const { nama, posisi } = answerKeys[idx];
-    const baris = posisi.baris;
-    const kolom = posisi.kolom;
+    const [baris, kolom] = posisi;
     const soal = document.querySelector(`.${nama}`);
 
     const isCorrect =

@@ -17,16 +17,20 @@
         </div>
         <div id="answer-field">
           <h1>RONDE 1</h1>
-          <div class="jawaban">
+          <form class="jawaban">
             <input
               id="answer"
-              class="jawab"
               type="text"
               placeholder="Masukkan jawaban"
               style="font-size: 30px"
             />
-            <button onclick="checkAnswer()" class="submit">Submit</button>
-          </div>
+            <input
+              onclick="checkAnswer()"
+              class="submit"
+              type="reset"
+              value="Submit"
+            />
+          </form>
         </div>
       </div>
       <div class="result"></div>
@@ -34,10 +38,13 @@
     <script>
       // Jawaban yang benar
       const correctAnswer = "99";
-      const [result] = document.getElementsByClassName("result");
+      const result = document.querySelector(".result");
+      const form = document
+        .querySelector("form")
+        .addEventListener("submit", (e) => e.preventDefault());
 
       function checkAnswer() {
-        const userAnswer = document.getElementById("answer").value.trim();
+        const userAnswer = document.querySelector("#answer").value.trim();
         result.innerHTML = "";
 
         const showResult = document.createElement("div");

@@ -41,6 +41,7 @@ button {
 button:hover {
   background: var(--primary);
   color: var(--white);
+  font-weight: bold;
 
   transition: all ease 100ms;
 }
